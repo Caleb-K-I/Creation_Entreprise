@@ -1,0 +1,1149 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[left=1cm, right=1cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[svgnames, dvipsnames]{xcolor}
+\usepackage{pgfgantt}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[autolanguage]{numprint}
+\usepackage{textcomp}
+\usepackage{layout}
+\usepackage{tcolorbox}
+\usepackage{setspace}
+\usepackage{appendix}
+\usepackage{pdfpages}
+\usepackage[explicit]{titlesec}
+\usepackage{sectsty}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\usepackage[Bjornstrup]{fncychap}
+\usepackage[Rejne]{fncychap}
+	%\ChTitleVar{\bfseries\Large\rm\selectfont\scshape\color{blue}}
+%	\ChNumVar{\Huge\selectfont\color{blue}}
+	%\ChNameVar{\bfseries\Large\sf\selectfont\color{blue}}
+	%\ChNumVar{\fontsize{76}{80}\usefont{OT1}{pzc}{m}{n}\selectfont}
+	%\ChTitleVar{\raggedleft\Large\sffamily\bfseries\color{green}}
+	\ChNameVar{\centering\Huge\rm\bfseries\color{green}} 
+	\ChNumVar{\Huge\color{green}} 
+	 \ChTitleVar{\centering\Huge\rm\color{green}}
+	 \ChNameUpperCase
+	 \ChTitleUpperCase
+	  \ChRuleWidth{0pt}
+\usepackage{tikz}
+%\usetikzlibrary{arrows, backgrounds, calc,patterns, positioning, shapes.geometric}
+
+
+\sectionfont{\color{green}{}\fontfamily{lmr}\fontseries{b}\fontshape{sc}\selectfont}
+\subsectionfont{\color{indiagreen}{}\fontfamily{lmr}\fontseries{b}\fontshape{sc}\selectfont}
+%\titlespacing{\section}{5pc}{1.5ex plus .1ex minus .2ex}{1pc}
+
+
+\setlist[itemize]{label = \ding{69}}
+
+\definecolor{indiagreen}{rgb}{0.07, 0.53, 0.03}
+\definecolor{green1}{rgb}{0.55, 0.71, 0.0}
+\definecolor{green}{rgb}{0.0, 0.62, 0.42}
+
+\renewcommand{\headrulewidth}{1pt}
+\fancyhead[C]{} 
+\fancyhead[L]{\color{green}\leftmark}
+\fancyhead[R]{}
+
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{} 
+\fancyfoot[L]{}
+\fancyfoot[R]{\textit{page \thepage}}
+
+
+
+\begin{document}
+\begin{titlepage}
+	\begin{center}
+		
+		% Upper part of the page. The '~' is needed because only works if a paragraph has started.
+		\includegraphics[width=0.35\textwidth]{MECEN}\\[1cm]
+		
+		\textsc{\LARGE \textbf{Master économiste d'entreprise \\ Université de Tours }\\ \vspace{0.5cm} \large \textit{Cours : Création d'entreprise}}\\[1cm]
+		
+		\textsc{\Large }\\[0.05cm]
+		
+		% Title
+	%	\HRule \\[0.4cm]
+		
+		{%\Huge \bfseries PROX' E-BIO\\
+			\includegraphics[scale=0.5]{logomarche}\\
+			
+			\vspace{0.5cm}
+			\Large Ventes ambulantes de produits bio et sains %\includegraphics[scale=0.04]{pomme}  
+			\\
+			[0.05cm] 
+		}
+		
+		%\HRule \\[1.5cm]
+		
+		% Author and supervisor
+		\vspace{0.6cm}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushleft} \large
+				\color{green}
+				\emph{\underline{Fondateurs}:}\\
+				\vspace{0.5cm}
+				Yasemin \textsc{AKDAG}\\
+				\vspace{0.2cm}
+				Mohamad Hassan  \textsc{EL KAWAS}\\
+				\vspace{0.2cm}
+				Caleb  \textsc{KASHALA ILUNGA}\\
+				\vspace{0.2cm}
+				Gwenaelle  \textsc{NICOLEAU}
+				\color{black}
+			\end{flushleft}
+		\end{minipage}
+		\begin{minipage}{0.4\textwidth}
+			\begin{flushright} \large
+				\includegraphics[scale=0.12]{img087}
+			%	\emph{Client:} \\
+			%	Prénom \textsc{Nom}\\
+			%	\emph{Référent:} \\
+			%	Prénom \textsc{Nom}
+			\end{flushright}
+		\end{minipage}
+		
+		\vfill
+		
+		% Bottom of the page
+		{\large \today}
+		
+	\end{center}
+\end{titlepage}
+
+
+	\tableofcontents
+
+	\chapter{Présentation de l'entreprise}
+
+
+		\section{Idée et origine}
+			L'idée est née lors d'une discussion entre quatre étudiants en master autour du changement des distributeurs de la faculté. Gwenaëlle faisant la remarque du manque de produits issus de l'agriculture biologique dans ces derniers. S'ensuivi Mohammad et Caleb ayant l'idée de vendre des produits sains par Internet voire de manière ambulante puis Yasemin, de proposer l'idée de bus avec un intérieur aménagé pour faciliter l'accès aux produits. 
+			Suite à de multiples échanges,  nous décidons alors de créer une entreprise de vente ambulante\footnote{L’exercice d’une activité ambulante par toute personne physique ou morale est caractérisé par une activité commerciale ou artisanale hors du territoire de la commune où est située son habitation. L’exercice de la profession peut s’effectuer sur la voie publique, les halles et les marchés} de produits bio et sains avec un bus aménagé de manière plus esthétique et efficace pour la vente. 
+		
+		\section{Objectif et part de marché}
+		Notre objectif principal est de desservir les communes rurales aux alentours de la ville de Tours, nous positionner sur le marché alimentaire de produits biologiques\footnote{un produit issu de l’agriculture biologique qui respecte un mode de production, de culture et d’élevage soucieux du respect des équilibres naturels. Il bénéficie généralement d’un label qui permet de certifier le respect de la règlementation générale et spécifique en matière de production biologique.}.
+		Ce but sera atteint via la mise en place de deux autocars, ce qui augmentera notre mobilité et  nous permettra d'acquérir un marché plus large. Complété par la mise à disposition d'un service d'achat en ligne en développant l'idée d'un accès \og drive\fg{} à nos marchandises afin de permettre à nos clients de venir retirer leurs paniers au bus aux heures et emplacements indiqués. Cette extension d'offre permettra de prendre en considérations les nouveaux modes de consommation.
+		
+		\section{Investisseurs}
+		
+		Nombreux agriculteurs, coopératives et fournisseurs se sont engagés dans la production et la commercialisation de produits biologiques qui sont soutenus par les pouvoirs publics dans cet objectif afin de garantir des produits plus sains et de meilleure qualité pour les consommateurs. Nous faisons donc appel à leur soutien financier.
+		
+		De même, nous faisons appel à différentes plateformes comme le KissKissBankBank ou bien Miimosa afin d'obtenir et de générer des financements participatifs et solidaires de la part de toutes personnes pour soutenir notre entreprise orientée et investie à rendre accessible des produits bio à une plus large population et par des préoccupations environnementale.
+		
+		La principale source de financement sera issu d'un prêt bancaire.
+		
+		Les associés apporteront 30 000 euros de fonds personnels au capital social de l'entreprise.
+		
+		Nous faisons appel à des marques pour sponsoriser notre entreprise et qui sont elles-même investies dans les problématiques environnementales
+		
+		
+		\section{Aspect juridique}
+		Notre entreprise sera créée sous le statut juridique d'une société à responsabilité limitée (SARL) et sera soumise à l'impôt sur les sociétés. Elle sera constituée de quatre associés chacun en charge d'un pôle de direction et sans hiérarchie. La prise de décision fera alors l'objet d'assemblée selon la volonté des associés. Les différents salarié(e)s auront un contrat de travail basé sur la durée légale des 35 heures de travail hebdomadaire.
+		
+		
+	\chapter{Présentation des fondateurs}
+	
+	Les fondateurs sont les quatre associés de l'entreprise qui ont le même cursus universitaire et ce jusqu'à leur année de spécialisation. Ayant obtenu une licence puis un master dans la branche "économiste d'entreprise" à l'Université de Tours en Juin 2019. Par la suite, chacun a effectué une année de spécialisation dans différents domaines mentionnés ci-après.
+
+		\section{Gwenaelle NICOLEAU}
+		
+			\begin{itemize}
+				\item Responsable de la section Stratégie – Ressources humaines / Relation publique.
+				\item Elle a pour responsabilité de manager les équipes, le personnel et la relation clientèle.
+				\item Spécialisation en ressources humaines.
+	
+			\end{itemize}
+		
+		\section{Caleb KASHALA ILUNGA}
+			\begin{itemize}
+				\item  Responsable du secteur IT – Logistique.
+				\item Il a pour responsabilité la gestion de stock et des réseaux de distribution ainsi que le développement informatique de l’entreprise.
+				\item Spécialisation en ingénierie informatique.
+	
+			\end{itemize}		 
+		
+		\section{Mohamad Hassan EL KAWAS}
+			\begin{itemize}
+				\item Responsable de la section Marketing.
+				\item Il a pour responsabilité la négociation des prix et quantités des marchandises avec nos différents fournisseurs.
+				\item Spécialisation dans le domaine « droit des contrats ».
+	
+			\end{itemize}
+		\section{Yasemin AKDAG}
+			\begin{itemize}
+				\item Responsable de la section Finance – Comptabilité.
+				\item Elle a pour responsabilité de suivre les aspects comptables et financiers de l’ entreprise, réaliser des études sur la situation économique et apporter les éléments nécessaires pour la prise de décision lors des réunions.
+				\item Spécialisation Comptabilité / fiscalité.
+			
+			\end{itemize}
+
+	\chapter{Étude économique}	
+	Cette étude est non exhaustive. Toutefois, elle permet de soulever les principaux enjeux du marché bio alimentaire et de son évolution, ceux de la ruralité française et de comprendre les principales caractéristiques de la demande dans le but d’orienter et d’adapter notre modèle économique et sa viabilité dans le temps.
+		
+		Problématiques étudiées :
+		
+		\begin{itemize}
+				\item Le marché « bio » alimentaire : sa tendance actuelle et son potentiel
+				\item Le consommateur « bio » : ses principales caractéristiques, ses perceptions, son potentiel
+				\item La ruralité française : sa population, ses caractéristiques, son potentiel
+		\end{itemize}
+		
+		\section{Étude de marché: Taille et tendances du marché}
+			
+			
+				
+		En 2017, le marché bio alimentaire représentait 8 milliards d’euros de chiffre d’affaire, soit une croissance de 17,6\% par rapport à 2016. Croissance confirmée en 2018 avec 9,7 milliards d’euros de chiffre d’affaire soit une croissance de 22\% par rapport à 2017.
+		
+		Si toutefois ce marché ne représente encore qu’une très faible part dans la consommation alimentaire globale des ménages, soit 4,4\%, il est néanmoins un marché en plein essor et les tendances sont fortes étant donné le ralentissement observé des dépenses des ménages dans l’alimentation générale. Il possède un gros potentiel de consommation aujourd'hui et à venir.
+		
+		Deux autres points viennent confirmer cette tendance croissante : la filière en amont et les importations. La conversion des surfaces agricoles en agriculture biologique est croissante et se confirme pour les années à venir (2 millions d’hectares cultivés en 2018 représentant 7,5\% de la surface agricole contre 6,5\% en 2017) ainsi que l’augmentation des importations de produits biologiques (1,64 milliard d’euros en 2017 contre 1,29 en 2016 soit 27\% de croissance).
+		
+	
+		
+		\begin{figure}[h]
+			\begin{minipage}[c]{.46\linewidth}
+				\centering
+				\includegraphics[scale=0.35]{Capture_image1}
+				%\caption{Légende}
+			\end{minipage}
+			\hfill%
+			\begin{minipage}[c]{.46\linewidth}
+				\centering
+				\includegraphics[scale=0.35]{Capture_image9}
+				%\caption{Légende}
+			\end{minipage}
+		\end{figure}
+		
+		
+		Un facteur semblerait être en lien avec cette croissance à savoir le renforcement et le développement de la grande distribution généraliste sur ce marché ces 10 dernières années qui ont su créer leur propre marque de distribution et leur réseau.  En effet, les grandes et moyennes surfaces  (GMS) représentent presque 50\% de part de marché contre 30\% pour les magasins spécialisés bio quant à eux plus ancien sur ce marché.  Les consommateurs de produits bio déclarent aller pour 80\% dans les GMS contre 30\% dans les magasins spécialisés bio. 
+	
+	 Le potentiel de la demande existe bel et bien étant donné le virage et l’investissement des GMS sur ce marché. Mais l’offre reste à construire.
+	 
+	 Quant aux prix, ceux des produits alimentaires de la consommation générale augmentent de 1,4\% en moyenne contre 2,3\% pour les produits alimentaires biologiques. Cette augmentation est constatée pour toutes les catégories de produits mais plus fortement pour les produits en pénurie (lait, charcuterie, salmonidé). Elle est, cependant, le reflet d’une stabilisation par rapport à l’année passée. \\
+	 
+	 
+	 
+	 Toutes les familles de produits sont concernées par un taux de progression des ventes. 
+	 
+	 Ceux pour lesquels ce taux est supérieurs à la moyenne générale sont les produits traiteur, les jus de fruits, les cidres, les bières, l’épicerie salée, la charcuterie, le vin, la boulangerie, les surgelés et les produits laitiers. Ceux inférieur à la moyenne générale mais supérieur à 10\% sont épicerie sucrée, œufs, fruits et légumes, boisson végétales, volaille, viande bovine, porcine. Ceux inférieur à la moyenne générale mais inférieur à 10\% sont les produits de la mer, le lait conditionné.
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 \section{Analyse de la Demande}
+	 
+	 Dans ce contexte, il semblerait que « le consommateur bio » ne soit encore qu’une minorité de l’ensemble des consommateurs. Sa disposition maximale à payer est peut-être à relativiser et les consommateurs peut être segmentés. Mais elle parait « battre son plein » et être une opportunité à saisir du point de vue économique. Quel est le profil du « consommateur bio et non bio »? Quelle est sa disposition à payer ? Peut-on l’estimer afin de capter au maximum le potentiel de la demande « cible » ?
+	 
+	 \subsection{Le consommateur bio}
+	 
+	 Se distinguent le « non-consommateur », le consommateur « occasionnel » et le consommateur « régulier » (quotidien, hebdomadaire, mensuels). D’après une étude datant de 2015, les chiffres portent à 89\% la proportion de consommateurs de produits bio en France. Sur ces 89\% , 24\% sont des consommateurs « occasionnels » et 65\% sont des consommateurs dits « réguliers », dont 28\% mensuel 27\% hebdomadaire et 10\% quotidien.
+	 
+	  La figure ci-après représente la fréquence d'achat selon une étude de 2018.
+	 
+	 
+	 
+	 \begin{figure}[h]
+	 		\centering
+	 		\includegraphics[scale=0.35]{frequence_consommateur}
+	 \end{figure}
+	 
+	 
+	 
+	Parmi les consommateurs bio,  se distinguent « les consommateurs de la première heure » des « nouveaux entrants » et la classe d’âge « des 18-25 ans ». Certaines caractéristiques personnelles paraissent plus importante tel que l’âge, le niveau de vie, la catégorie socioprofessionnelle (CSP) et la taille du foyer.\\
+	
+\textbf{Ce qu'il faut retenir:}\\
+
+	\begin{itemize}
+	\item Les consommateurs de 50 ans et plus  sont ceux de la première heure.
+	
+	\item Les nouveaux entrants sont le plus souvent des femmes, des CSP- et des jeunes de 18-24 ans.
+	
+	\item La moitié des consommateurs bio vivent dans un foyer de deux personnes.
+	
+	\item Les jeunes de 18-25 ans sont les plus impliqués en matière de perception environnementale bien qu’ils aient un moindre réflexe à consommer bio.
+	
+	\item Les jeunes citadins qui ont peu d’attaches sont peu consommateurs.
+	
+	\item Les 25-34 ans et jeunes familles convertie au bio sont très sensible à leur budget.
+	
+	\item Le niveau de vie médian est légèrement supérieur dans les zones de chalandise des magasins bio.
+	
+	\item La sensibilité au prix est plus forte chez les personnes de 35-64 ans que chez les jeunes de 18-25 ans. Toutefois, le prix reste, pour l’ensemble, un critère fort de consommation et aussi un frein. Subsiste la perception du prix « trop cher » par les consommateurs. \\
+	\end{itemize}
+
+\textbf{Les critères d'achat:}\\
+	
+	\begin{itemize}
+		\item Les raisons de santé, la qualité et le gout des produits sont les deux principales raisons d’achat avant le respect de l’environnement.  
+		\item  Le contexte du produit : son origine de fabrication (français ou pas), sa provenance (locale ou pas). \\
+	
+	\end{itemize}
+
+	Tout ceci relève de tendances actuelles, fortes et en pleine mutation. D’autant qu’un contexte d’exigence et de transparence sur le marché alimentaire est attendu par le consommateur moyen qui a aussi ses habitudes d’achats et de déplacements bien enracinés. 
+	
+	
+	Alors que majoritairement les magasins spécialisés bio sont situés dans des aires urbaines\footnote{Est considérée comme zones urbaines « une zone bâtie peuplée d'au moins 2 000 habitants et telle qu'aucune construction ne soit distante de la plus proche de plus de 200 mètres ».}, notre objectif principal est de desservir des communes en dehors de celle-ci: Ceci nous conduit à nous intéresser à la ruralité française et ses spécificités.
+	
+	\subsection{La « ruralité » française }
+	
+	Le rural peut être défini globalement comme \textit{« un espace où la nature et l’activité agricole sont très présentes, où les habitants sont moins nombreux et plus éloignés des services »}.\\
+	
+	
+	Il y a 30 019 communes de moins de 2000 habitants, soit 85\% du total de communes en France Métropolitaine, ce qui représente une population de 15,3 millions d’habitants, soit 23\% de la population totale. En Indre-et-Loire, il y a 84 communes de moins de 500 habitants et 139 comprises entre 500 et 2000 habitants.
+	
+	Il est néanmoins plus hétérogène qu’il n’y parait. Deux caractéristiques sont à retenir: la densité et l’éloignement d’une aire urbaine. 
+	
+	La première est relative à une déficience de la population et l’éloignement d’un ménage par rapport à un autre. 
+	
+	 Ceci pouvant engendrer des surcouts au projet: déplacements plus nombreux et plus distancés se faisant dans des régions plus ou moins vallonnées et une demande qui pourrait s’avérer trop faible.  \\
+	 
+	 Il convient peut-être d’englober dans notre sphère de chalandises les communes dont le nombre d’habitants serait alors supérieur à 2000 habitants sans pour autant dépasser les 10 000. Les chiffres passant de 97\% du total des communes et 50\% de la population française. En Indre-et-Loire, 10 communes sont comprises entre 2000 et 10,000 habitants.   \\
+	 
+	La seconde caractéristique est relative au fait de distinguer les communes rurales qui sont « isolées » des villes, des équipements les plus courants, dont les déplacements sont plus conséquents entre le domicile et lieu d’achat, de celles qui sont « proches » des villes qui bénéficient d’un accès plus rapide aux commerces et services, aux équipements communs et aux emplois avec des navettes quotidiennes entre le domicile et le lieu de travail. \\
+	
+	C’est pourquoi, le projet devra considérer et prendre en compte ces aspects territoriaux afin d’optimiser son itinéraire, la localisation de son lieu de réapprovisionnement, ses zones de ventes, sa publicité afin de se faire connaitre de la population ciblées et prendre en compte les nouveaux modes de consommation en ligne et ce afin de répondre aux  questions relatives à la mobilité (déplacement domicile-travail, dépendance de la voiture) dans ces milieux. \\
+	
+	Il s’agit d’appréhender le concept de mobilité dans tous ces aspects selon le type de campagne desservie. 
+	
+	Pour les communes de 500 habitants et les plus éloignées des centres urbains, un bus aux dimensions plus petites peut paraitre alors intéressant. Cependant, il doit être suffisamment grand pour proposer une gamme de produits bio diversifiés et éviter le piège du simple magasin de dépannage. Ceci pourrait être largement soutenu par les pouvoirs politiques locaux afin de redynamiser ces communes et créer de l’attractivité et un service de proximité afin de répondre au phénomène de « désertification »\footnote{Phénomène décrivant « le délaissement » des commerces et services des zones rurales avec plusieurs facteurs comme la faible densité de la population, les conditions d’accès insuffisants aux transports collectifs, le développement des surfaces commerciales et du e-commerce conjoint au phénomène de périurbanisation. Cependant, il s'avère être plus le reflet d’une mutation progressive de l’offre commerciale. } des commerces et services dans les zones rurales et de lutter contre les inégalités territoriales.\\
+	
+	Pour les communes les plus proches d’une unité urbaine, privilégier le stationnement à proximité des axes routiers les plus affluents notamment ceux que les consommateurs empruntent au quotidien pour leurs déplacements domicile-travail et proposer un service drive, en ligne en plus du magasin en lui-même. \\
+	
+	Pour le reste des communes, le bus serait stationné sur les places publiques les plus dynamiques, centrales et les plus accessibles à la fois pour le bus et les consommateurs. 
+	
+		\subsection{Estimation de la Demande Potentielle }
+	
+	Au regard de toutes ces éclairages sur le marché et la demande, comment mesurer le potentiel de cette dernière ? 
+	
+	Cette estimation peut être réalisée grâce à l'élaboration d'une base de données en récupérant les caractéristiques sociodémographiques de la population de chaque communes rurales ciblées dans le département (classes d’âge, genre, taille du foyer, la situation professionnelle, moyens de transport utilisés, revenu fiscal du foyer), les équipements  (services et commerces) disponibles autour de chaque ville, la distance séparant d’un aire urbaine la plus proche, la distance séparant la ville du premier point de vente alimentaire le plus proche. 
+	
+	Certaines de ces données ont été à ce jour récupérées mais reste à compléter et à construire.
+	
+	Nous proposons pour cette étude une méthodologie d'approche de la demande potentielle suivant le tableau des correspondances établit à partir de nos observations faites ci-dessus:	\\
+	
+	%\includegraphics[scale=0.9]{tableau.PNG}
+	\begin{table}[htbp]
+		\centering
+		\caption{\color{green}Tableau des correspondances}
+		\vspace{0.3cm}
+		\begin{tabular}{l|r|r|r}
+			
+			\textbf{Classe d'âge}& \textbf{Réflexe d'achat} & \textbf{Disposition à payer} & \textbf{Type de consommateurs}\\ \hline
+			\rule[0.5cm]{-0.1cm}{0cm}
+			15 - 29 ans & peu & faible  & occasionnel   \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+			30 - 44 ans & nouveaux & faible et moyenne & occasionnel et régulier mensuel\\
+			\rule[0.5cm]{-0.1cm}{0cm}
+			45 - 59 ans & fréquent & moyenne et forte & régulier mensuel et hebdomadaire  \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+			60 ans et $+$ & forte & forte & régulier quotidien  \\ 
+
+			
+		\end{tabular}%
+		\label{tab:addlabel}%
+	\end{table}%
+	\vspace{0.5cm}
+	
+		
+	Le tableau ci-dessus prend en compte les classes d'ages et le réflexe d'achat et détermine les consommateurs à faible disposition comme nos consommateurs occasionnels ayant peu de réflexe à acheter des produits biologiques et les consommateurs ayant une disposition plus forte comme nos consommateurs réguliers ayant plus de réflexe d'achat.\\	
+
+	
+	Exemple réalisé sur la commune de Saint-Genouph (37510) de 1058 habitants:\\
+	
+	Le tableau ci-dessous prend en compte uniquement la population féminine qui est encore selon nous celle qui fait majoritairement les courses, qui pense au bien-être et la qualité nutritionnelle du ménage et veille au budget.
+	
+
+	
+	
+		%\includegraphics[width=0.95\textwidth]{tableau2.PNG}
+	\begin{table}[htbp]
+		\centering
+		\caption{\color{green}Les consommatrices - exemples}
+		\vspace{0.5cm}
+		\begin{tabular}{l|c|c|c|l|l}
+			
+			\textbf{Classe d'âge}& \textbf{Population} & \textbf{Femmes} & \textbf{Potentiel}& \textbf{Type de}&\textbf{Nb de consommateurs}\\ 
+			 & \textbf{totale} & & \textbf{de 89\%} & \textbf{consommateurs} & \textbf{potentiels} \\ \hline
+			\rule[0.5cm]{-0.1cm}{0cm}
+			15 - 29 ans & 171 & 85  & 76 & 24\% & 18 occasionnelles   \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+			30 - 44 ans & 205 & 98 & 87 & 24\% & 21 occasionnelles\\
+			& & & & 28\% de 65\% & 16 réguliers mensuels \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+			45 - 59 ans & 260 & 134 & 119 & 28\% de 65\% & 22 mensuelles \\
+			& & & & 27\% de 65\%& 21 hebdomadaires\\
+			& & & &10\% de 65\% & 8 quotidiens \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+			60 ans et $+$ & 240 & 120 & 107 & 28\% de 65\% & 20 mensuelles  \\ 
+			& & & & 27\% de 65\%& 19 hebdomadaires \\
+			& & & & 10\% de 65\% & 7 quotidiens \\
+			
+			
+		\end{tabular}%
+		\label{tab:addlabel}%
+	\end{table}%
+	\vspace{0.7cm}
+	
+	En résumé, le nombre potentiel de consommateurs dans la commune de Saint-Genouph est de 152 personnes dont :
+		\begin{itemize}
+			\item 39 occasionnels
+			\item 113 réguliers dont :
+				\begin{itemize}
+					\item 58 mensuels
+					\item 40 hebdomadaires
+					\item 15 quotidiens
+				\end{itemize}
+		\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white, colframe=green!75!black]
+	A partir de cette estimation moyenne de la demande sur une ville de 1000 habitants, nous proposons une estimation du chiffre d'affaire annuel:
+	
+	\begin{enumerate}
+		\item Supposant que le camion fasse une tournée dans la campagne française et visite 5 villes par jour suivant les créneaux horaires 10h-12h-14h-16h-18h et qu'il réalise sa tournée en 15 jours, soit 70 communes visitées, et revienne au bout de 15 jours afin de fidéliser les clients.
+		\item Supposant que les consommateurs "quotidiens"  dépensent 90 euros, les consommateurs "hebdomadaires" dépensent 45 euros, les consommateurs mensuels dépensent 15 euros et enfin les consommateurs occasionnels dépensent 10 euros.
+	\end{enumerate}
+	\vspace{0.5cm}
+	\textbf{\color{green}\underline{Le chiffre d'affaire annuel est de 6 350 400 millions d'euros.}}
+\end{tcolorbox}
+
+
+
+
+	
+	
+				\section{Produit et développement}
+				
+				
+Nous développons notre entreprise sur la vente de proximité, ambulante et innovante aménagée dans un bus type « voyageur », proposant une large gamme de produits alimentaires et non alimentaires "100\% bio", "éco-responsable"\footnote{Ce concept renvoie à la responsabilité du consommateur dans ces nouveaux modes d’achat qui s’effectueraient vers des biens et services plus respectueux de l’environnement, plus soucieux du contexte de fabrication et distribution et concerner aussi bien l’impact écologique, social, sanitaire que la préservation d’une certaine qualité de vie. } voire "locale" et ce au plus proche des exigences, modes de vies des consommateurs ruraux actuels. 
+	
+	
+					\section{Perspectives d'évolution}
+
+Plusieurs raisons contribuent à penser que le marché continuera de progresser, que notre entreprise à des chances d'être stable, pérenne et viable économiquement dans le long terme:
+
+La génération des 18-25 ans promet un potentiel de consommateurs futurs notables parce qu'elle représente la future génération et qu'elle se sent beaucoup plus investie et préoccupées par les questions de protection environnementale et la qualité de vie. 
+
+Les questions de mobilité vont de plus en plus se poser à l'avenir notamment la dépendance aux transports individuels tels que la voiture dans les zones dites rurales dont l'un des points noirs est le manque d'accès aux transports en communs.
+
+La progression des surfaces agricoles en production biologique maintient sa tendance croissante et est soutenu par l'accroissement des ventes par les distributeurs généralistes qui lui permet de trouver ses débouchés.
+
+Le maintien et la préservation de la qualité du cadre de vie de la campagne pour ses habitants qui ne souhaitent pas retourner à la ville. 
+
+		\section{Points forts et faibles de l'exercice}
+
+\subsection{Points forts}
+Les différents points forts de l'entreprise sont:
+
+Un marché en croissance, en pleine évolution et à la « la mode » c'est à dire que le concept "bio",  "préserver la nature" sont des concepts "tendances" qui répondent aux préoccupations environnementales actuelles. 
+
+Des consommateurs de plus en plus informés et conscients de ce qu’ils mangent c'est à dire des aliments plus sains, à valeur nutritionnelle et de qualité supérieure et issus d'une agriculture biologique. Ce qui est un facteur significatif au niveau de la consommation des produits alimentaires. 
+
+Les réglementations sont de plus en plus favorables à l’essor des produits bio.
+
+Les entreprises de transformation et commercialisation des produits bio peuvent bénéficier d’aides publiques pour réaliser leurs projets auprès de différents financeurs : les Conseils Régionaux, les Agences de l’Eau, les Groupes d’Action Locale, Bpifrance, FranceAgriMer, ou encore l’Agence Bio….
+
+Des prix qui deviennent de plus en plus raisonnables. Cette compétitivité permet aux produits d'acquérir une place plus importante lors des choix d'achat des consommateurs.
+
+Un des avantages du projet est sa flexibilité qui lui permet de mieux s’adapter à la demande et évoluer facilement au cours du temps, ce qui est un facteur très important pour la réussite à long terme. 
+
+La récupération des données clients permettra d'adapter notre offre et nos stocks aux besoins. De plus, on pourra étudier les préférences de chaque client grâce à ses achats en pré-commandes réalisés sur notre site Web. 
+
+La diversité de nos produits bio nous permettra de travailler sur plusieurs marchés et toucher plus de consommateurs.
+
+\subsection{Points faibles }
+
+Nos points faibles sont:
+
+La réputation des produits bio considérés comme "trop cher", qui ne seraient accessibles que par les personnes possédant un pouvoir d’achat élevé. 
+
+Les coûts de départ notamment l'acquisition d'un bus électrique ou hydrogène et son aménagement intérieur ainsi que la promotion afin de prévoir une publicité intensive afin de se faire connaître et créer un réseau clientèle et nos charges fixes de départ. 
+
+Trouver la localisation et le trajet le plus optimale pour attirer le plus de consommateurs et minimiser nos frais de déplacements. 
+
+	
+	
+			
+	\chapter{Produits de l'entreprise}
+		\newpage
+		\section{Description des produits}
+		
+			% Table generated by Excel2LaTeX from sheet 'Feuil1'
+			\begin{table}[h]
+				\centering
+				%\caption{Add caption}
+				\begin{tabular}{lrrrr}
+					\textbf{ Produits } & \textbf{Quantité(kg)} & \textbf{ Prix de vente} & \textbf{ Prix/kg } & \textbf{ CA} \\
+					& \textbf{par jour} & \textbf{kg ou pièce} & & \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					\textit{\textbf{\color{green}Fruits /Légumes : }}&       &       &    &    \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					Banane & 17    & 1,99 €  &  1,39 €  &  33,83 €  \\
+					 Cerise  & 5     &   10,18 €  &   7,13 €  &  50,90 €  \\
+					 Pomme  & 17    &    1,70 €  & 1,19 €  &   28,90 €  \\
+					Tomate  & 20    &   1,80 €  & 1,26 €  &   36,00 €  \\
+					Poireau  & 10    &  1,62 €  &  1,13 €  & 16,20 €  \\
+					Poire  & 15    & 2,70 €  &   1,89 €  &    40,50 €  \\
+					 Carottes  & 20    &                                    2,00 €  &                         1,40 €  &                                 40,00 €  \\
+					Concombre  & 10    &                                    1,45 €  &                         1,02 €  &                                 14,50 €  \\
+					 Courgette  & 20    &                                    2,23 €  &                         1,56 €  &                                 44,60 €  \\
+					 Nectarine  & 10    &                                    1,20 €  &                         0,84 €  &                                 12,00 €  \\
+					Kiwi (pièce)  & 1000  &                                    5,00 €  &                         3,50 €  &                           5 000,00 €  \\
+					Oignon  & 10    &                                    1,65 €  &                         1,16 €  &                                 16,50 €  \\
+					Choux Fleurs  & 15    &                                    1,00 €  &                         0,70 €  &                                 15,00 €  \\
+					 Fruits sec sachet & 20    &                                    5,20 €  &                         3,64 €  &                               104,00 €  \\
+					Œufs  & 1200  &                                    2,50 €  &                         1,75 €  &                           3 000,00 €  \\
+					Haricots (blanc, rouge) en sachets & 20    &                                    1,65 €  &                         1,16 €  &                                 33,00 €  \\
+					Laitue (pièce) & 20    &                                    1,00 €  &                         0,70 €  &                                 20,00 €  \\
+					 Mangue (pièce)  & 10    &                                    2,50 €  &                         1,75 €  &                                 25,00 €  \\
+					 Orange  & 30    &                                    2,00 €  &                         1,40 €  &                                 60,00 €  \\
+					Pêche  & 20    &                                    0,90 €  &                         0,63 €  &                                 18,00 €  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					\textit{\textbf{\color{green}Viandes :}} &       &       &   &   \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					 Volaille (barquettes) & 30    &                                    5,00 €  &                         3,50 €  &                               150,00 €  \\
+					 Steak hachée bio (boites)  & 30    &                                    7,00 €  &                         4,90 €  &                               210,00 €  \\
+					
+					Surgelé :  &       &       & &  \\
+					Pizza surgelé  & 35    &                                    2,71 €  &                         1,90 €  &                                 94,85 €  \\
+					 Surgelé Légumes  & 40    &                                    1,85 €  &                         1,30 €  &                                 74,00 €  \\
+					 Surgelé Fruits & 35    &                                    3,00 €  &                         2,10 €  &                               105,00 €  \\
+					Chocolat Bio (pièces)  & 30    &                                    1,35 €  &                         0,95 €  &                                 40,50 €  \\
+					 Saumon surgelé  & 30    &                                 11,60 €  &                         8,12 €  &                               348,00 €  \\
+					Glace bio / sorbet & 20    &                                    3,00 €  &                         2,10 €  &                                 60,00 €  \\
+					Haricots vert  & 25    &                                    1,20 €  &                         0,84 €  &                                 30,00 €  \\
+					 Épinard  & 25    &                                    1,25 €  &                         0,88 €  &                                 31,25 €  \\
+					\end{tabular}%
+				\label{tab:addlabel}%
+				\end{table}%
+			\newpage
+				\begin{table}[h]
+						\centering
+						%\caption{Add caption}
+						\begin{tabular}{lrrrr}
+							\textbf{ Produits } & \textbf{Quantité(kg)} & \textbf{ Prix de vente} & \textbf{ Prix/kg } & \textbf{ CA} \\
+							& \textbf{par jour} & \textbf{kg ou pièce} & & \\
+							\rule[0.5cm]{-0.1cm}{0cm}
+					\textbf{\textit{\color{green}Céréales :}} &       &       &  €  &  €  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					Pâtes (vrac)  & 50    &                                    0,85 €  &                         0,60 €  &                                 42,50 €  \\
+					Céréales  & 50    &                                    1,85 €  &                         1,30 €  &                                 92,50 €  \\
+					Riz & 50    &                                    1,32 €  &                         0,92 €  &                                 66,00 €  \\
+					Soupe (sachets)  & 20    &                                    2,00 €  &                         1,40 €  &                                 40,00 €  \\
+					Lentilles & 40    &                                    2,00 €  &                         1,40 €  &                                 80,00 €  \\
+					L'avoine   & 40    &                                    2,10 €  &                         1,47 €  &                                 84,00 €  \\
+					 Pois chiche  & 20    &                                    2,27 €  &                         1,59 €  &                                 45,40 €  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					\textit{\textbf{\color{green}Produits traiteur:}}  &       &       &     &     \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					Ratatouille  & 30    &                                    3,00 €  &                         2,10 €  &                                 90,00 €  \\
+					Fricassée de légumes  & 30    &                                    4,00 €  &                         2,80 €  &                               120,00 €  \\
+					Risotto  & 25    &                                    1,83 €  &                         1,28 €  &                                 45,75 €  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					\textbf{\textit{\color{green}Crèmerie : }} &       &       &    &  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					Lait (paquets)  & 20    &                                    6,00 €  &                         4,20 €  &                               120,00 €  \\
+					Fromage  & 60    &                                    2,40 €  &                         1,68 €  &                               144,00 €  \\
+					
+					\rule[0.5cm]{-0.1cm}{0cm}
+					\textbf{\textit{\color{green}Condiments: }}  &       &       &  &   \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					Sauce : Ketchup, Mayonnaise, etc… & 40    &                                    1,50 €  &                         1,05 €  &                                 60,00 €  \\
+					Épices  & 40    &                                    1,50 €  &                         1,05 €  &                                 60,00 €  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\textit{\color{green}Produits non alimentaires:}}  &       &       &  &     \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					Shampoing  & 15    &                                    2,60 €  &                         1,82 €  &                                 39,00 €  \\
+					Pull bio  & 10    &                                 30,00 €  &                       21,00 €  &                               300,00 €  \\
+					Lessive  & 30    &                                    6,00 €  &                         4,20 €  &                               180,00 €  \\
+					T-shirt  & 10    &                                 30,00 €  &                       21,00 €  &                               300,00 €  \\
+					Chemise  & 10    &                                 35,00 €  &                       24,50 €  &                               350,00 €  \\
+					Hygiène  & 30    &                                    2,20 €  &                         1,54 €  &                                 66,00 €  \\
+					Soins de visage : à l'argile,etc... & 30    &                                 12,00 €  &                         8,40 €  &                               360,00 €  \\
+					 Vaisselles & 30    &                                    2,17 €  &                         1,52 €  &                                 65,10 €  \\
+					Savons  & 30    &                                    2,34 €  &                         1,64 €  &                                 70,20 €  \\
+					\rule[0.5cm]{-0.1cm}{0cm}
+					\textbf{\color{green}TOTAL}	&       &       &       & \textbf{\color{green}12 572,98 € } \\
+					
+				\end{tabular}%
+				\label{tab:addlabel}%
+			\end{table}%
+			
+			\newpage
+
+		\section{Facteurs de différenciation :}
+			
+	Notre projet se différencie de la grande distribution avec un large éventail de produits bio proposés.
+	
+	Il se veut plus pratique et plus mobile pour les consommateurs qui habitent loin des zones urbaines et plus isolé des commerces et services. Ainsi, notre projet permet de diminuer le coût de transport non négligeable pour certains consommateurs qui seront donc peut être prêt à payer un peu plus cher au vu du gain de temps et d'essence pour faire leurs courses. 
+	
+	De plus, l'entreprise se différenciera à travers des pré-commandes que le consommateur pourra faire en ligne. Ainsi, le consommateur remplira son panier qu'il pourra récupérer au prochain passage du camion près de chez lui ou sur son trajet domicile-travail aux heures et points proposés ce qui lui permettra de gagner du temps sans chercher dans le bus.
+		
+		\chapter{Concurrence}
+		
+		
+		\section{Répartition parts de marché}
+	5 grands types de circuits de distribution se distinguent sur le marché alimentaire bio qui sont par ordre d'importance en terme de part de marché en 2017:
+\begin{itemize}
+\item Les Grandes Surfaces Alimentaires généralistes : près de 50\% 
+
+\item La Distribution Spécialisée bio en réseau: 30\%
+
+\item La Distribution Spécialisée bio indépendante: 6\%
+
+\item Les Artisans-Commerçants: 5\%
+
+\item La Vente Directe: 13\%
+\end{itemize}
+
+
+
+	 \begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.6]{Capture_image4}
+	\end{figure}
+
+
+
+
+\textbf{Leurs caractéristiques principales sont:}\\
+ 
+La grande distribution a la part de marché la plus importante avec 50\%. C'est le circuit qui bénéficie de la plus forte dynamique. Les grandes surfaces ont accru leurs ventes de produits biologiques dans leurs enseignes principales et spécialement dans les magasins de proximité. Elles développent et contrôlent une partie des réseaux spécialisés y compris dans la vente en ligne. Elles ont créé leur propre marque de distribution bio. Ce développement est ce qui maintient largement leur part de marché.\\
+
+Les détaillants spécialisés bio continuent globalement leur développement. Toutefois, pour les enseignes en réseau leur progression est très faible tandis que pour les enseignes indépendantes elle recule légèrement. 
+	\begin{itemize}
+		\item Ceux en réseau sont très développés avec un parc en hausse de 9\% et une surface accrue de 12\%. 
+		
+		\item Ceux en indépendants sont les pionniers du secteur. Ils ont une moindre puissance d’achat, d’investissement et d’organisation et leur nombre de magasins se stabilise avec une surface de vente qui s’accroît de 4\%.
+	\end{itemize}
+	
+
+Globalement, leur croissance du chiffre d'affaire est plus faible, il y a un manque de développement du réseau, et leur positionnement est plus traditionnel (surfaces plus petites, sans mise en avant des fruits et légumes, sans rayon boucherie à la coupe et centrées sur les marques les plus anciennes).
+Toutefois, il existe une certaine disparité des taux de croissance individuel plus que par le passé. Et on peut souligner que ceci affecte aussi les préparateurs orientés vers les enseignes bio spécialisés ou ceux qui n’ont pas fait le choix de développer leurs relations avec le grand commerce généraliste.\\
+
+
+Les Artisans-Commerçants bénéficient de taux de croissance important bien qu'ils représentent 5\% de part de marché. Il s'agit surtout des cavistes, boulangers et poissonniers qui conservent des taux de croissance importants mais pas les bouchers.\\
+
+La vente directe continue de bénéficier de taux de croissance importante alors qu'elle représente 12,7\% de part de marché. Il s'agit du secteur du vin qui tire particulièrement ce mode de commercialisation notamment les producteurs de vin bio. En dehors de ce secteur, les ventes directes des producteurs agricoles se développent à un rythme de 10\%.
+
+Nous pouvons aussi regarder plus en détail les couples produits et circuits. Quelles sont les familles de produits le plus vendus par chacun de ces circuits?
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{Capture_image5}
+\end{figure}
+
+
+Spécialisation principale:\\
+\begin{itemize}
+	\item GMS: produits de crémeries (lait, produits laitiers, oeufs) et viande (bovine, volaille, charcuterie) et épicerie (sucrée/salé, boissons sans alcool).
+	
+	\item Les circuits bio : la vente de fruits/légumes frais et épicerie.
+	
+	\item Les Artisans-Commerçants: Boissons alcoolisés et crèmerie/viande
+	
+	\item La vente directe: Boissons alcoolisés et fruits/légumes frais.
+\end{itemize}
+
+
+
+Parmi ces circuits de distribution, quels sont ceux qui seraient potentiellement nos concurrents?
+		
+			\section{Principaux concurrents}	
+		
+		Notre projet compte desservir les communes situées dans les zones non urbaines. \\
+		 
+		Tout d'abord, nous pouvons écarter les magasins spécialisés bio qui sont le plus souvent implantés dans les grandes villes et aussi dans des régions où la production de l’agriculture biologique s’est le plus développée (La Région Sud, parisienne et Nord-Ouest).  \\
+		
+		En ce qui concerne la distribution généraliste, il nous faut considérer la problématique de la \textit{"désertification"} comme une mutation de l’offre commerciale. En effet, des mouvements s'opèrent cette dernière décennie entre un regain des petites surfaces alimentaires de proximité dans les aires urbaines tandis que s'est développé des supermarchés et hypermarchés en périphérie de localité de moins de 20 000 habitants et enfin une nette fragilisation des commerces et services de ventes de produits du quotidien et de proximité dans les communes rurales.
+		Ce qui génère des mutations dans la manière d'acheter des consommateurs des zones rurales qui doivent en moyenne parcourir plus de distance que leurs homologues urbains afin d'accéder aux biens de consommation de tous les jours ou bien changer leur mode d'achat en privilégiant la vente en ligne et ce en rappelant qu'il existe une différence entre les consommateurs habitant dans une commune rurale "proche" ou "éloignée" d'une aire urbaine influente.\\
+		
+		Nos principaux concurrents seront alors essentiellement les supermarchés et hypermarchés généralistes, qui proposent à la vente un certain étalage de produits bio dans leurs magasins, et qui sont majoritairement implantés en périphérie des communes ou situés sur les axes domicile-travail dans lesquels nos consommateurs ont l'habitude de faire leurs courses ou de s'arrêter. 
+		
+		
+		
+		
+					\section{Positionnement par rapport à l'étude économique}	
+		
+		L'utilité de créer un concept à l’instar de « Grand Frais » ou « Village Bio » chez nos concurrents distributeurs afin de "frapper les esprits", de se positionner sur le marché, créer une marque à part entière frappante et facile à retenir (pas plus de 3 syllables). Nous proposons alors le concept suivant: « Le ProX e-Bio ». Un mélange de proximité, e-commerce et produits bio.
+		
+		
+		Il parait important de proposer une large gamme de produits bio à la vente afin de capter au maximum le consommateur et qu'il puisse remplir son panier au maximum dans notre magasin et se baser sur l'étude des produits bio pour lesquels il y a de fortes tendances de consommation.  
+		
+		Être mobile afin de minimiser le cout "physique" et "psychologique" des consommateurs, créer une certaine régularité de passage du bus afin de fidéliser nes consommateurs à notre magasin.  
+		
+		Proposer une proximité avec nos clients que n'ont pas nos concurrents. 
+		
+			
+		
+		
+		\chapter{Distribution}
+		
+			\section{Stratégie}
+				
+			Notre stratégie consiste à optimiser l’itinéraire afin de capter le maximum de clients pour maximiser notre chiffre d’affaire sous la contrainte du cout de recharge de nos bus électriques dont l’autonomie est d’environ 300 km ainsi que la conservation de nos produits frais. 
+			
+			Pour cela, une distance minimale pourra être recherchée entre les communes visitées en prenant comme point de départ une ville de taille moyenne  afin de planifier le circuit emprunté par le bus. Etant donné que nous ciblons des communes de moins de 2000 habitants délaissés par les acteurs actuels de la grande distribution mais que nous décidons d'élargir aux communes de moins de 10 000 habitants afin d'aller capter un marché plus large, nous choisissons de stationner un bus dans une ville moyenne qui réponde aux critères suivants : proche d’un axe routiers important (flux réguliers) et faire une tournée avec un autre camion dans les communes alentours plus petites. 
+			Le bus stationnera sur les places centrales, celles des marchés ou proche des axes routiers les plus affluents. 
+			
+			Nous imaginons des créneaux horaires de passage assez réguliers pour le "mini bus", soit 10h-12h-14h-16h-18h. Ce qui porte le nombre de communes à visiter à 5 ainsi que nous imaginons faire une tournée en 15 jours et ce afin de fidéliser les clients à notre magasin.
+			
+			Nous choisissons un lieu de stockage et de réapprovisionnement dans une commune rurale proche d'un grand axe routier et avoir un loyer moins cher.
+
+		 	Nos produits frais (fruits/légumes, produits locaux) seront issus de fournisseurs et producteurs locaux que nous aurons démarché avant le début de nos activités. 
+		 	
+		 	La plupart de nos produits bio (épicerie, traiteur et autres) seront fournis par nos partenaires extérieurs et fournisseurs bio de l'industrie agro-alimentaire.
+		 
+
+		 	Le "bio-bus" à double étage aura pour rôle de stationner dans les communes à forte influence proche des axes routiers à flux régulier ou sur un emplacement de marché ou place centrale de la commune pour faciliter l’accès à nos produits pour les consommateurs et les approvisionner correctement.
+			
+			Pour le bus à un étage, nous optons pour qu’il sillonne les petites communes alentours  afin qu’elle puisse assurer les ventes de nos produits dans les petites communes ainsi palier et lutter davantage contre la désertification dans les zones éloignées.
+			
+
+			Le point essentiel est de trouver une localisation optimale de notre lieu de stockage et de réapprovisionnement afin de faciliter le déplacement de nos bus, son chargement et déchargement ainsi que la conservation de nos produits dans des bonnes conditions. La ville qui a été choisi au préalable est Azay-le-rideau pour sa situation géographique et son accessibilité grâce aux axes routiers affluent et sa proximité à la ville de Tours. De plus, étant assez éloigné de la ville de Tours le loyer sera de moindre coût, ainsi nous pourrons réduire nos dépenses.
+			
+						
+			Au début du lancement de notre projet, nous débuterons avec deux bus. Un bus à double étage intitulé « bio bus » et un bus à un étage la version "mini".
+			
+			L’aménagement des bus sera fait de sorte que les clients puissent se promener à l'intérieur au milieu des rayons, qu'ils puissent toucher les produits et se servir ou se faire servir. Une chambre froide sera aménagée au fond du bus pour les produits frais.\\ 
+			
+			
+
+			
+			\begin{figure}[h]
+				\centering
+				\includegraphics[scale=0.7]{bus}
+			\end{figure}					
+
+			
+
+
+
+				
+			\section{Contraintes}
+			
+				Nos contraintes sont l’autonomie du bus et son réapprovisionnement en produits. 
+				
+				Etant donné qu'il sillonnera plusieurs villes, il  pourrait alors être en impossibilité de se déplacer dû au fait qu’il n’y ait pas de bornes de recharge pour véhicule électrique sur le trajet du bus et ne plus pouvoir desservir nos clients. Afin de palier cette contrainte, il est envisagé de discuter avec les maires des communes afin de prévoir l'installation de bornes électriques subventionnées par la collectivité. Autre solution alternative serait d'acheter un générateur indépendant pour recharger le bus mais cette solution est très couteuse.
+				
+				
+				Au début du projet, nous pourrions rencontrer un problème de manque de stocks dû à une sous-estimation de la demande. La solution sera d'augmenter le stock en conséquence.
+				
+				Un autre problème serait le manque de réapprovisionnement en produits bio auprès de nos fournisseurs. La solution serait de trouver directement nos fournisseurs à l'étranger.
+				
+
+				
+				
+				
+		\chapter{Commercialisation}
+		
+					Nos bus auront pour mission principale de servir de la meilleure façon ses clients et ce à l'intérieur comme à l'extérieur du bus avec un espace dédié en proposant des délicatesses (café, thé et petits gateaux) afin de créer une proximité avec nos différents clients et leurs offrir un accueil de qualité. Tout cela dans le but de créer des liens forts et un sentiment d’appartenance avec notre marque chez nos clients pour mieux gagner leur fidélité. 
+		
+			\section{Canaux de distribution}
+			
+				Le bus est notre principal canal de distribution.
+	
+				Afin de considérer les nouveaux modes de consommation et les nouvelles habitudes tendances, nous aurons notre site web pour que les consommateurs puissent faire des pré-commandes ce qui nous permettra, en parallèle, de mieux jauger la demande et diminuer nos pertes.
+	
+				Il serait intéressant de négocier des accords commerciaux avec « Uber eats » et d'autres entreprises de livraison qui pourront mieux encore réduire le cout de la distance et du temps de parcours des consommateurs à faire leurs courses.
+				
+				
+			\section{Action marketing}
+				
+				Nous prévoyons, avant le lancement du projet,  une campagne publicitaire intensive durant 1 mois sur les grands panneaux publicitaires répartis un peu partout dans les villes où nous serons de passage. 
+				
+				Nous faire connaitre auprès des élus des collectivités cibles qui deviendront eux-même nos "voix" publicitaires. Participer à différents événements (sportifs, salons, culturels, étudiants...) pour commencer à nous développer, se faire connaitre et ainsi diffuser notre marque.
+				
+				
+				Nous affichons un logo percutant et un slogan sur la façade de nos bus pour être facilement reconnaissable et nous mettrons également des logos de nos partenaires économiques et sponsors sur nos bus.
+				
+\begin{itemize}
+	\item Nom de l’enseigne : « Prox e-Bio »
+	\item Slogan: “Bio and Bio-tiful Life! Votre magasin 100\% écolo”
+	\item Sponsors : Decathlon, Orange, Schneider Electric, Fondation Nicolas Hulot..... 
+\end{itemize}
+
+\vspace{0.2cm}
+
+Nos différentes "voix" publicitaires seront :
+\begin{itemize}
+	\item Nos fournisseurs, producteurs  et partenaires
+	\item Des pages publicitaires de nos sponsors dans notre application 
+	\item Des cartes de fidélité
+\end{itemize}
+	
+Éventuellement, nous utiliserons une musique adaptée pour faire de la publicité sonore à l’arrivée du bus pour annoncer son installation.
+				
+				
+
+				
+		
+		
+	\chapter{Stratégie de développement}										
+	
+	
+	
+	\section{Évolution de l’offre}
+	
+	Cette partie détermine si notre business va pouvoir s’adapter et être pérenne à long terme.
+	
+	Plusieurs idées sont envisagés afin d'évoluer notre offre.
+	
+	Tout d'abord, on peut prévoir un mini bus qui servira des plats, menus et collations à midi (sandwiches, salades etc…) dans le même concept "bio" c'est à dire que tous les plats et menus proposés seront composés d'aliments bio, sains et frais de bonne qualité. Nous visons alors une clientèle composée d'actifs qui sortent déjeuner le midi, qui recherche un menu rapide, bon et en même temps sain.
+	
+	Participer aux évènements sportifs pour se faire de plus en plus connaître auprès d'un public plus large et offrir des échantillons aux participants et au public. Ces échantillons pourraient être distribués à l'occasion d'animations et petits jeux. C’est une sorte de publicité informative sur notre entreprise.
+	
+	Une autre idée qui pourrait être une source de financement futur: vendre des espaces publicitaires sur notre application destinée à la vente en ligne. Ces espaces seront évidemment réservées à des entreprises tournées vers les préoccupations bio et écologiques qui s’intéressent au même marché et à la même cause que notre projet.
+	
+	Enfin, l'idée serait de créer à long terme notre propre marque seulement après avoir fidéliser nos consommateurs qui nous font confiance et habitués à acheter dans notre magasin ambulant.
+	
+	A long terme, avec l'augmentation de la demande pour nos produits bio nous envisageons d'employer des salariés et investir dans de nouveaux bus. 
+	
+	\section{Partenariats futurs}
+	
+	Nous pensons faire des accords commerciaux avec les producteurs locaux et négocier avec eux afin de nous proposer des prix un peu moins élevés que les marques bio. Ainsi, répercuter cet avantage auprès de nos clients en leur vendant nos produits à des prix moins cher.
+	
+	Nos principaux partenaires seront les différents producteurs et distributeurs de marques estampillées et labellisées "bio".\\
+	
+	Ces partenaires seront des entreprises qui souhaitent se faire connaître, étendre leurs ventes de produits bio sur un périmètre plus large.\\
+	
+	Nos activités pourront être sponsorisés par d'autres investisseurs potentiels sur des contrats à court terme : Banque, entreprise d’investissement, assurance...\\
+	
+	Ouvrir notre société à des investisseurs individuels qui deviendront des sociétaires et participeront aux assemblées, aux financements et pourront bénéficier d'un pourcentage de réduction sur leurs achats.\\
+	
+	Créer des partenariats avec des habitants des communes rurales visitées vendeur et désireux de partager leur production personnelle dans nos rayons.
+
+		\chapter{Moyens humains}
+		
+		Au commencement de notre projet, les 4 membres fondateurs de l’entreprise s’acquitteront de toutes les activités au sein des bus pour minimiser les couts. Ils seront 2 par bus en charge de la tournée, de la conduite du bus à la vente des produits tout en passant par le chargement des produits.\\
+
+
+		\chapter{Dossier financier}
+	\section{Moyens matériaux}
+		% Table generated by Excel2LaTeX from sheet 'saisie'
+		\begin{table}[h]
+		  \centering
+		  \caption{\color{green}Matériaux}
+		  \vspace{0.5cm}
+		    \begin{tabular}{l|r}
+		    
+		    	\textbf{Matériel} & \textbf{Coût ou valorisation du coût} \\
+		 		\textit{Description sommaire} &  \textit{Achat envisagé}  \\ \hline 
+		    	\rule[0.5cm]{-0.1cm}{0cm}
+		    	Autocar  & 500 000 €   \\
+		    	\rule[0.5cm]{-0.1cm}{0cm}
+		    	Mini Bus & 250 000 € \\
+		    	\rule[0.5cm]{-0.1cm}{0cm}
+		    	Aménagement véhicule & 70 000 €\\ \hline
+		    	\rule[0.5cm]{-0.1cm}{0cm}
+		    	 \textbf{\color{green}Total } &    \textbf{\color{green}820 000 €}  \\
+		
+		    \end{tabular}
+		  \label{tab:addlabel}
+		\end{table}
+				
+		\begin{table}[h]
+			\centering
+			\caption{\color{green}Locaux}
+			\vspace{0.5cm}
+			\begin{tabular}{l|r}
+				
+				\textbf{Locaux} & \textbf{Coût ou valorisation du coût} \\
+				\textit{Description sommaire} &  \textit{Location}  \\ \hline 
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\color{green}Dépôt de 500 $m^2$  & 6 000 €   \\
+				\color{black}
+				
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+	\newpage
+	\section{Capitaux}
+		% Table generated by Excel2LaTeX from sheet 'saisie'
+		\begin{table}[h]
+		  \centering
+		  \caption{\color{green}Capitaux}
+		    \begin{tabular}{l|r}
+		    
+		           & \textit{Capital social } \\ \hline
+		     \rule[0.5cm]{-0.1cm}{0cm}
+		    Apport personnel & 120 000 €   \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+		    Apport des autres associés  &  20 000 € \\
+			\rule[0.5cm]{-0.1cm}{0cm}
+		    Aides financières publiques: Nationales & 5 000 €  \\
+		    \rule[0.5cm]{-0.1cm}{0cm}
+		    Aides financières privées: \textit{financement participatif} & 60 000 € \\ \hline
+		    \rule[0.5cm]{-0.1cm}{0cm}
+		    \textbf{\color{green}Total} & \textbf{\color{green}205 000 €}
+		    
+		    \end{tabular}%
+		  \label{tab:addlabel}%
+		\end{table}%
+	
+	\section{Besoin en fonds de roulement BFR}
+	
+		\vspace{0.3cm}
+		\begin{table}[h]
+			\centering
+			\caption{\color{green}Besoin en Fonds de Roulement (BFR)}
+			\vspace{0.5cm}
+			\begin{tabular}{l|r|r|r}
+				
+				\textbf{Stock :}& \textbf{Plan de financement} & \textbf{Fin de l'exercice 1} & \textbf{Fin de l'exercice 2}\\
+				\textit{matières et fournitures} & \textbf{initial} & &  \\ \hline
+				\rule[0.5cm]{-0.1cm}{0cm}
+				Produits finis & 20 000 € & 20 000 € & 20 000 € \\
+				\hline
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\color{green}BFR net} & \textbf{\color{green}20 000 €} & & \\
+				
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+	\newpage
+	\section{Plan de financement prévisionnel}
+	\begin{table}[h]
+		\centering
+		\caption{\color{green}RESSOURCES (en Euros H.T.)}
+		\vspace{0.5cm}
+		\begin{tabular}{l|r|r}
+			
+			
+			& \textbf{Plan de financement initial} &\textbf{Fin de l'exercice 1} \\
+			\textbf{Capitaux propres} & & \\					
+			\textit{Apport personnel} & 120 000€ &	120 000 €	 \\
+			\textit{Apport des associés} & 20 000 € & \\		
+			\textit{Aide publique} &	5 000 € &  \\	
+			\textbf{Emprunts}	& &  \\					
+			\textit{Emprunt bancaire} & 	660 000 € &	660 000	€  \\
+			\textbf{Autres aides et ressources} & &  \\
+			\textit{Financement participatif} & 60 000 €& 60 000	€  \\					
+			\textbf{Capacité d'autofinancement}	& &  \\					
+			\textit{ dotation aux amortissements de}	& & \\					
+			\textit{l'exercice + résultat de l'exercice}	&  & 2 195 280 €  \\					
+			
+			\textbf{\color{green}TOTAL} & \textbf{\color{green}865 000 €} &	\textbf{\color{green}3 035 280 €}  \\	
+			
+		\end{tabular}%
+		\label{tab:addlabel}%
+	\end{table}%
+	
+	\begin{table}[h]
+		\centering
+		\caption{\color{green}BESOINS (en Euros H.T.)}
+		\vspace{0.5cm}
+		\begin{tabular}{l|r|r|r}
+					
+			&\textbf{Plan de financement}&\textbf{Fin de } & \textbf{Fin de }\\
+			& \textbf{initial} &\textbf{l'exercice 1} & \textbf{l'exercice 2} \\
+			\hline
+			%\textbf{Immobilisations incorporelles} &  &  & \\
+			%\rule[0.5cm]{-0.1cm}{0cm}						
+			%\textbf{Fonds de commerce} &  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}	
+			%\textbf{Droit au bail} &  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}				
+			%\textbf{Frais de 1er établissement} &  &  & \\						
+			%\textit{immatriculation, honoraires, frais}	&  &  & \\					
+			%\textit{d'étude, publicité de départ,etc.}	&  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}			
+			%\textbf{Immobilisations corporelles}	&  &  & \\					
+			%\textit{investissements}	&  &  & \\		
+			%\rule[0.5cm]{-0.1cm}{0cm}			
+			%\textbf{Terrains}&  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}					
+			%\textbf{Constructions}&  &  & \\	
+			\rule[0.5cm]{-0.1cm}{0cm}				
+			\textbf{Installations BUS} & 820 000 € & 820 000 € & \\		
+			\rule[0.5cm]{-0.1cm}{0cm}				
+			%\textbf{Véhicule professionnel}	&  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}			
+			%\textbf{Matériel} &  &  & \\
+			%\rule[0.5cm]{-0.1cm}{0cm}					
+			%\textbf{Mobilier} &  &  & \\
+			%\rule[0.5cm]{-0.1cm}{0cm}						
+			%\textbf{Autre (préciser)} &  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}					
+			%\textbf{Immobilisations financières}	&  &  & \\					
+			%\textit{dépôt de garantie}&  &  & \\	
+			%\rule[0.5cm]{-0.1cm}{0cm}					
+			\textbf{Remboursement annuel}&  &  & \\							
+			\textbf{du capital}			&  &  & \\				
+			\textbf{de l'emprunt}	&  & 95 000 € & 95 000 €\\	
+			\rule[0.5cm]{-0.1cm}{0cm}				
+			\textbf{BFR net}&  &  & \\		
+			\rule[0.5cm]{-0.1cm}{0cm}		
+			\textbf{\color{green}TOTAL}		& 	\textbf{\color{green}820 000 €}	&\textbf{\color{green} 915 000 €}	  & \\
+			\end{tabular}%
+		\label{tab:addlabel}%
+		\end{table}%
+	
+	
+	\section{Compte de résultat prévisionnel première année d'exercice}
+		\begin{table}[h]
+			\centering
+			\caption{\color{green}Compte de résultat prévisionnel pour le premier exercice}
+			\vspace{0.5cm}
+			\begin{tabular}{l|r|l|r}
+				\textbf{\color{green}CHARGES} & MONTANT & \textbf{\color{green}PRODUITS}& MONTANT\\
+				%\multicolumn{2}{c}{\textbf{\small CHARGES}}	& %\multicolumn{2}{c}{\textbf{\small PRODUITS}} \\ 
+				%& \textbf{\small MONTANT}	& 	&\textbf{\small MONTANT} \\
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\small \color{green}ACHATS} & & 		\textbf{\small \color{green}CHIFFRE D'AFFAIRES}	& \\
+				\textit{Matières premières} & 	& \textit{Ventes de produits finis,} &	6 350 400 € \\
+				& & \textit{marchandises} & \\
+				\textit{Marchandises} &	4 000 000 € &	\textit{Prestations de service} & \\	
+				\textit{Fournitures diverses}&	2 400 € & 	\textit{Commissions} & \\	
+				\textit{Emballages} &	300 € & 	\textit{Ristournes} & \\
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\small \color{green}CHARGES EXTERNES} & & & \\		
+				\textit{Sous traitance} 	& & & \\	
+				\textit{Loyer} &	6 000 €  & & \\		
+				\textit{Charges locatives} & & & \\		
+				\textit{Entretien et réparations (locaux, mat)} & 	2 500 € & &  \\		
+				\textit{Fournitures d'entretien} & 2 400 €  & & \\	
+				\textit{Fournitures non stockées (eau, edf)} & & & \\			
+				\textit{Assurances (local, véhicule d'exploitation)}& 1 000 € & & \\	
+				\textit{Frais de formation} & & & \\			
+				\textit{Documentation} &	500 €	 & & \\	
+				\textit{Honoraires} &	3 500 € & &  \\		
+				\textit{Publicité} & 5 000 € & & \\	
+				\textit{Transports} &	4 000 €  & & \\		
+				\textit{Crédit-bail (leasing)} & & & \\			
+				\textit{Déplacement, missions} &	6 000	&  & \\	
+				\textit{Frais postaux, téléphone} &	500	€ & &  \\	
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\small \color{green}IMPÔTS ET TAXES} &	1 500 € & & \\
+				\rule[0.5cm]{-0.1cm}{0cm}	
+				\textbf{\small\color{green} CHARGES DE PERSONNEL}	& & & \\		
+				\textit{Rémunérations des salariés} &	76 800 € &  & \\		
+				\textit{Charges sociales des salariés} &	30 720 € & &  \\		
+				%\textit{Prélèvement de l'exploitant} & & & \\	
+				%\textit{(si entreprise individuelle)} & & & \\	
+				\rule[0.5cm]{-0.1cm}{0cm}	
+				\textbf{\small \color{green} SOCIALES DE } & & & \\		
+				\textbf{\small \color{green}L'EXPLOITANT} &&&\\
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\small \color{green} FINANCIÈRES}		& & & \\	
+				\textit{Intérêts des emprunts} &	12 000 €	& &  \\	
+				\textit{Charges exceptionnelles} & & & \\	
+				\rule[0.5cm]{-0.1cm}{0cm}		
+				\textbf{\small \color{green}DOTATION AMORTISSEMENTS}	& & & \\	
+				\textbf{\small\color{green} ET PROVISIONS} &	80 000	 & & \\	
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{\small\color{green} IMPÔTS SUR LES BÉNÉFICES }	& & & \\
+				%\textbf{(\small cas des soc.)}	& & & \\	
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{Total des charges} &	4 235 120 €  & & \\	
+				\rule[0.5cm]{-0.1cm}{0cm}
+				\textbf{Résultats (bénéfice)} &	2 115 280 € & &  \\	
+				\rule[0.5cm]{-0.1cm}{0cm}	
+				\textbf{\color{green}TOTAL} &	\textbf{\color{green}6 350 400 €} &	\textbf{\color{green}} &	\textbf{\color{green}6 350 400 €} \\
+				
+			\end{tabular}%
+			\label{tab:addlabel}%
+		\end{table}%
+		
+		
+
+
+		\chapter{Calendrier}
+
+			Le tableau ci dessous regroupe le calendrier de la création de notre entreprise.\\
+			
+	
+\begin{ganttchart}[expand chart=0.95\textwidth,
+								hgrid=true,
+								vgrid={*1{green1, dotted}}]{1}{13}
+								
+\gantttitle{2019}{4} 
+\gantttitle{2020}{9} \\
+\gantttitlelist{9,...,12}{1} 
+\gantttitlelist{1,...,9}{1} \\
+%\ganttgroup{Group 1}{1}{7} \\
+\ganttbar[
+	bar/.append style={fill=green, rounded corners=3pt}
+		]{\color{green}Constitution de la société}{1}{7} \\
+\ganttbar[
+	bar/.append style={fill=green, rounded corners=3pt}
+		]{\color{green}Acquisition des investisseurs}{8}{9} \\
+\ganttbar[
+	bar/.append style={fill=green, rounded corners=3pt}
+		]{\color{green}Démarrage de la production}{10}{11} \\
+\ganttbar[
+	bar/.append style={fill=green, rounded corners=3pt}
+		]{\color{green}Lancement de l'activité}{12}{13} 
+%\ganttlinkedbar{Task 2}{3}{7} \ganttnewline
+%\ganttmilestone{Milestone}{7} \ganttnewline
+%\ganttbar{Final Task}{8}{12}
+%\ganttlink{elem2}{elem3}
+%\ganttlink{elem3}{elem4}
+\end{ganttchart}
+
+%\appendix
+
+
+\begin{appendix}
+	\chapter{CV des fondateurs}
+
+	\includepdf[scale=0.9]{cv_gwen.pdf}
+	\includepdf[scale=0.9, pages={1,2}]{cvcaleb.pdf}
+	\includepdf[scale=0.9]{CVKAWAS.pdf}
+	\includepdf[scale=0.9]{CV_AKDAG_projet.pdf}
+	
+
+
+	\chapter{Bibliographie}
+	
+	\begin{itemize}
+		\item  https://www.planetoscope.com/Autre/186-ventes-de-produits-bio-en-france.html
+		\item Aspects juridiques: https://www.ecologique-solidaire.gouv.fr/temps-travail-des-conducteurs-routiers-transport-personnes
+		\item Statuts juridique : https://www.lecoindesentrepreneurs.fr/les-statuts-d-entreprises/
+		\item Aménagement véhicule: https://www.wikicampers.fr/blog/homologuer-un-vehicule-amenage/
+		
+		\item « Dossier de Presse : Baromètre de consommation et de perception des produits biologiques en France », Agence BIO, février 2019.
+		
+		
+		\item « Dossier de Presse : Un ancrage dans les territoires et une croissance soutenue. Les chiffres 2018 du secteur bio », Agence BIO, 4 juin 2019.
+		
+		\item « Les magasins bio : des magasins presque comme les autres », INSEE Première, n°1779, Octobre 2019.
+		
+		\item « Le marché alimentaire bio en 2017.  Estimation de la consommation des ménages en produits alimentaires biologiques en 2017 », Agence BIO , Edition 2018.
+		
+		
+		\item « Du rural éloigné au rural proche des villes : cinq types de ruralité », INSEE Analyses, n°77, Février 2019.
+		
+		\item « Les entreprises en France », INSEE. Edition 2017
+		
+		\item « LES COLLECTIVITÉS LOCALES ET LEUR POPULATION en chiffre 2018 »
+		
+		\item « Quel avenir pour le commerce de proximité dans les quartiers ? », étude du Conseil National des Centres Commerciaux, Juin 2013.
+		
+	\end{itemize}
+
+\end{appendix}
+
+
+
+\end{document}
